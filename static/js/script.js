@@ -57,7 +57,7 @@ function displayTD(index) {
         : "list-group-item-danger"
     }">${JSON.stringify(
       ent
-    )} <span class="controls float-end"><a class="btn btn-sm btn-outline-secondary me-2">✏</a>&nbsp;<a class="btn btn-sm btn-outline-secondary" onclick="removeent(this)">❌</a></li>`;
+    )} <span class="controls float-end"><a class="btn btn-sm btn-outline-secondary me-2" onclick="editent(this)">✏</a>&nbsp;<a class="btn btn-sm btn-outline-secondary" onclick="removeent(this)">❌</a></li>`;
   }
 }
 
@@ -81,6 +81,10 @@ function updateLS() {
   localStorage.setItem("tdfixer", JSON.stringify(config));
 }
 
+function validatetd() {
+  //todo: run python script to check valid docbin
+  alert("not implemented yet");
+}
 window.onload = () => {
   if (localStorage.getItem("tdfixer") !== null) {
     config = JSON.parse(localStorage.getItem("tdfixer"));
@@ -146,4 +150,8 @@ function removeent(ele) {
       console.log(res);
       parent.remove();
     });
+}
+
+function editent(ele) {
+  alert("not implemented yet");
 }
