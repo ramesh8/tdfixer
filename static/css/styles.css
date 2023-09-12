@@ -1,0 +1,30 @@
+.nav-link{
+    border:2px solid transparent;
+}
+.nav-link:hover{
+    background-color: rgba(165, 42, 42, 0.25);
+    border-color: rgba(165, 42, 42, 0.5);
+    border-radius:5px;
+}
+
+.greenhilit {
+    background:#0f05;
+    margin: 0px 4px 0px 4px;
+}
+
+.redhilit {
+    background:#f005;
+    margin: 0px 4px 0px 4px;
+}
+
+.list-group-item{
+    cursor: pointer;
+}
+
+.controls{
+    display: none;
+}
+
+.list-group-item:hover > .controls{
+    display: inline-block;
+}
