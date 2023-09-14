@@ -7,13 +7,18 @@
     border-radius:5px;
 }
 
-.greenhilit {
+
+.success-hilit {
     background:#0f05;
     margin: 0px 4px 0px 4px;
 }
 
-.redhilit {
+.danger-hilit {
     background:#f005;
+    margin: 0px 4px 0px 4px;
+}
+.warning-hilit {
+    background:#ff05;
     margin: 0px 4px 0px 4px;
 }
 
@@ -27,4 +32,27 @@
 
 .list-group-item:hover > .controls{
     display: inline-block;
+}
+
+.stats{
+    font-size:12px;
+
+}
+.stats span{
+    margin-left:10px;
+    margin-right:10px;
+    padding:2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    /* border:1px solid #eee; */
+}
+
+#sents{
+    background: #f005;
+}
+#vents{
+    background: #0f05;
+}
+#dents{
+    background: #ff05;
 }

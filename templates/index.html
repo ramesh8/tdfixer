@@ -1,7 +1,13 @@
 {% extends "base.html"%} {%block title%} TD Fixer {%endblock%} {%block body%}
-<h1 class="header my-4">Fix Entities</h1>
-<div class="row">
-  <div class="col-md-8">
+<h1 class="header my-4">
+  Entity #<span id="eindex"></span>
+  <small class="stats"
+    ><span id="vents"></span>valid <span id="dents"></span>duplicate
+    <span id="sents"></span>space
+  </small>
+</h1>
+<div class="row align-items-start">
+  <div class="col-md-8 sticky-top py-3">
     <div class="card">
       <div class="card-body">
         <!-- <h5 class="card-title">Card title</h5>
@@ -32,7 +38,7 @@
       </div>
     </div>
   </div>
-  <div class="col-md-4">
+  <div class="col-md-4 py-3">
     <div class="card">
       <ul class="list-group list-group-flush" id="tdents">
         <li class="list-group-item">An item</li>
@@ -42,6 +48,31 @@
     </div>
   </div>
 </div>
+<!-- <button type="button" class="btn btn-primary" id="liveToastBtn">Show live toast</button> -->
+
+<div class="position-fixed top-0 end-0 p-3" style="z-index: 11">
+  <div
+    id="liveToast"
+    class="toast hide"
+    role="alert"
+    aria-live="assertive"
+    aria-atomic="true"
+  >
+    <div class="toast-header">
+      <!-- <img src="..." class="rounded me-2" alt="..." /> -->
+      <strong class="me-auto">🔧 TD Fixer</strong>
+      <small>Now</small>
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="toast"
+        aria-label="Close"
+      ></button>
+    </div>
+    <div class="toast-body" id="alertmsg">...</div>
+  </div>
+</div>
+
 <script src="{{url_for('static', filename='js/script.js')}}"></script>
 
 {%endblock%}
